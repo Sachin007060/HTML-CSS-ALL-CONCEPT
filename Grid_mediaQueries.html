@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid with Media queries</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fix, minMax(300px, 1fr));
+            grid-template-areas: "nav nav nav"
+                "section section aside"
+                /* "section section aside"  */
+                "footer footer footer";
+        }
+
+        nav {
+            grid-area: nav;
+            text-align: center;
+        }
+
+        section {
+            grid-area: section;
+            text-align: center;
+
+        }
+
+        aside {
+            grid-area: aside;
+            text-align: center;
+
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+
+        }
+
+        .bdr {
+            border: 2px solid black;
+            padding: 23px;
+            background-color: darksalmon;
+        }
+
+        @media only screen and (max-width:400px) {
+            body {
+                background-color: red;
+            }
+            .container {
+                grid-template-areas: "nav nav nav"
+                    "section section section"
+                    "aside aside aside"
+                    "footer footer footer";
+            }
+            span{
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width:400px) and (max-width:800px) {
+            body {
+                background-color: green;
+            }       
+        }
+
+        @media only screen and (min-width:800px) and (max-width:1200px) {
+            body {
+                background-color: blue;
+            }
+            .container {
+                grid-template-areas: "nav nav nav"
+                    "section section section"
+                    "aside aside aside"
+                    /* "section section aside"  */
+                    "footer footer footer";
+            }
+        }
+
+        @media only screen and (min-width:1200px) and (max-width:1600px) {
+            body {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>Services</span>
+            <span>About</span>
+            <span>Contact Us</span>
+        </nav>
+        <section class="bdr"><h1>Learn CSS with me!</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi ab perspiciatis omnis reiciendis consequuntur libero, cupiditate eum, culpa amet quos nostrum eligendi veritatis maiores. Dolores aliquid illum doloribus nam, possimus pariatur soluta ea! Amet, debitis cum. Amet, iure quasi repudiandae voluptatum eius animi similique nobis nesciunt corrupti consequuntur dignissimos beatae assumenda eveniet dolorem, sunt optio. Quisquam dolor explicabo recusandae non, sunt commodi. Inventore quae officia illo velit, ad, itaque alias blanditiis autem ut harum in repudiandae est unde labore voluptas atque ab dignissimos voluptatibus a nam sit? Tempora at doloremque aliquam!,  </p>
+    </section>
+        <aside class="bdr"><h2>Welcome to the aside container</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magnam sapiente quidem est animi harum beatae enim corporis laborum excepturi, molestiae sit fugit?</p></aside>
+        <footer class="bdr">All right are reseved of MyOnlineSite.com &hearts;! </footer>
+    </div>
+</body>
+
+</html>

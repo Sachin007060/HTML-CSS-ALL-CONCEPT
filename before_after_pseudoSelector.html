@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After qseudo_selector</title>
+    <link rel="stylesheet" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: black;
+            color: white;
+            font-family: 'Mulish', sans-serif;
+        }
+
+        section::after{
+            content: "This is appear after the section ";
+        }
+        section::before{
+            content: "This is appear before the section ";
+        }
+        header::before {
+            background: url(https://unsplash.it/1920/1080?random) no-repeat center center/cover;
+
+            /* When content, position, width, height, z-index used then the background image will show in the page. 
+            Top & left is used cover the all the area of the page from top to left*/
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            opacity: 0.5;
+            top: 0px;
+            left: 0px;
+
+
+
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            margin: 3px 220px;
+            align-items: center;
+            height: 400px;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4em;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .navlist {
+            list-style: none;
+            padding: 20px 23px;
+        }
+
+        .navUnorder {
+            font-size: 18px;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navUnorder">
+                <li class="navlist">Home</li>
+                <li class="navlist">About</li>
+                <li class="navlist">Services</li>
+                <li class="navlist">Contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <section>
+        <h1>Welcome to conding world</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel asperiores illo ex aliquam magni
+            numquam,
+            aspernatur et nemo inventore temporibus harum labore excepturi! Nisi, repellat deserunt, error sunt est
+            molestias voluptates quo ab neque magnam maxime eum aliquid molestiae esse repudiandae accusantium!
+            Voluptates, architecto.</p>
+    </section>
+    <hr>
+</body>
+
+</html>

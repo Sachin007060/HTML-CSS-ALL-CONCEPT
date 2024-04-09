@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css selectors</title>
+    <style>
+
+        h3{                                 /*This is a element selector*/
+            color: seagreen;            
+        }
+        p{                                 /*This is a element selector*/    
+            border: solid 4px cyan;
+        }
+
+        #pblue{                             /*This is a id selector*/
+            color: blue;
+        } 
+
+        .pred{                              /*This is a class selector*/
+            color: red;
+        }
+        .pbg{                               /*This is a class selector*/
+            background-color: black;
+        }
+
+        span, footer{                       /*grouping the tag using css grouping selector*/
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>This is Css Selectors</h3>
+    <p class="pred pbg">This is a paragraph</p>
+    <p id="pblue">This is another paragraph</p>
+    <p class="pred">This is yet another paragraph</p>
+    <span>This is a span</span>
+    <footer>This is a footer</footer>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units Using rem/em/vh/vw For Responsiveness</title>
+    <style>
+        html{
+            font-size: 10px;
+        }
+        .container{
+            border: solid 2px red;
+            /* height: 500px; */
+            /* It will take the page full height vh(view port height) */
+            height: 100vh;
+
+            /* width: 500px; */
+            /* It will take the page full widht vw(view port widht) */
+            width: 100vw;
+        }
+
+        h3{
+            text-align: center;
+        }
+        #heading1{
+            /* font-size: 3em; */
+        }
+        #heading2{
+            /* font-size: 3rem; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 id="heading1">This is first heading</h3>
+        <h3 id="heading2">This is second heading</h3>
+        <h3 id="heading3">This is third heading</h3>
+    </div>
+</body>
+</html>

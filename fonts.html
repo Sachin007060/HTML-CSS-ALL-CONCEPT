@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css fonts</title>
+
+    <!-- These links are for including web fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <style>
+        h3 {
+            font-family: 'Oswald', sans-serif;          /*web font*/
+        }
+
+        p {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /*web safe font  with stack web fonts(if impact did't found than Arial narrow bold font will executed.*/
+        }
+
+        ul {
+            font-family: 'Oswald', sans-serif;          /*web font*/
+            font-family: 'Space Grotesk', sans-serif;   /*web font*/
+        }
+        span {
+            font-weight: 33px;
+            font-style: italic;
+            line-height: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Css fonts</h3>
+    <p>Css fonts can be used as:</p>
+    <div>
+        <ul type="circle">
+            <li>Web safe fonts(preinstall in O.S)</li>
+            <li>web fonts(google fonts)</li>
+            <li><span>Stack</span> web fonts</li>
+        </ul>
+    </div>
+</body>
+
+</html>

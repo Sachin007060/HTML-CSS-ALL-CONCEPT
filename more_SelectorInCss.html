@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Selector in Css</title>
+    <style>
+        /* div p{
+            background-color: cyan;
+        } */
+
+        div li{
+            background-color: tomato;
+        }
+
+        div>p{
+            background-color: magenta;
+        }
+
+        div + p{
+            background-color: maroon;
+        }
+        span{
+            background-color: purple;
+        }
+        span div{
+            background-color: chartreuse;
+        }
+        span > div > pre{
+            background-color: mediumspringgreen;
+        }
+
+        p{
+            padding: 8px;
+            margin: 7px;
+        }
+        pre > p{
+            background-color: darkolivegreen;
+        }
+        div + pre{
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <ul>
+                <li><p>This is a paragraph inside the li tag</p></li>
+            </ul>
+            <p>This is the paragraph inside the div tag</p>
+        </div>
+        <p>This is another paragraph inside the div tag but it's a sibling of a div tag</p>
+    </div>
+    <p>This is the paragraph outside the div tag but it's a sibling of a div tag</p>
+    <span>
+        <div>
+            <pre>this is the pre tag insid the div tag<p>This is the paragraph inside the pre tag</p></pre>
+        </div>
+        <pre>This is a pre tag outside the div tag but insisde the span tag</pre>
+    </span>
+    <span>this is a span tag</span>
+</body>
+</html>

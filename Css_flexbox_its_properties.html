@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Flexbox</title>
+    <style>
+        .container {
+            height: 500px;
+            width: 100%;
+            border: 2px solid red;
+            margin: 3px;
+            padding: 4px;
+            display: flex;
+            /* flexbox properties for flex container */
+            /* note:- Always remeber flex properties used only when the box display is flex */
+
+            /* by default flex direction is row */
+            flex-direction: row; 
+            /* flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse; */
+
+            /* It is an important property used for creating box responsive */
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+            
+            /* short hand (flex-flow: row wrap) for flex direction(row) & flex wrap(wrap) */
+            flex-flow: row wrap;
+
+            /* very important property of flex:- justify-content will justify the content in horizontal direction */
+            /* It center all the boxes of the container*/
+            justify-content: center;  
+
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly; */
+
+            /* Important property of flex:- Align-items will align the content in vertical direction */ 
+            /* It center the boxes verticaly */
+            align-items: center;
+
+            /* align-items: flex-start;
+            align-items: flex-end; */
+        }
+
+
+
+        /* Flex properties for a flex's container items  */
+        /* Note:- flex item can not be uses in class ,all the item propeties should be in different ida(unique) of boxes  */
+        #item1{
+            /* Higher the order, later it shows up in the container */
+            order: 2;
+
+            /* flex-grow: 2;
+            flex-shrink: 2; */
+
+        }
+        #item2{
+            /* flex-grow: 3;
+            flex-shrink: 3 ; */
+            flex-basis: 160px;
+            /* when flex-direction is set to row flex-basis: will control width */
+            /* when flex-direction is set to column flex-basis: will control height */
+        }
+        #item3{
+        /* short hand for flex items:- flex: flex-grow(2) flex-shrink(2) flex-basis(230px) */
+            /* flex: 2 2 230px; */
+
+            /* important property for container's item */
+
+            /* it change the place of box number 3 at the end of the box */
+            align-self: flex-end;
+
+            /* align-self: flex-start;
+            align-self: center; */
+
+            }
+
+
+
+        .item {
+            background-color: #eec5ef;
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item1">Box number 1</div>
+        <div class="item" id="item2">Box number 2</div>
+        <div class="item" id="item3">Box number 3</div>
+        <div class="item" id="item4">Box number 4</div>
+        <div class="item" id="item5">Box number 5</div>
+        <div class="item" id="item6">Box number 6</div>
+    </div>
+</body>
+
+</html>

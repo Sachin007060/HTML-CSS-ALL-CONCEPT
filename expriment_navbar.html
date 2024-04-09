@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <style>
+        .navbar {
+            background-color: cyan;
+            border-radius: 33px;
+            border-bottom: 2px solid black;
+            height: 57px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            margin: 17px 36px;
+            float: left;
+            list-style: none;
+            padding: 4px 6px;
+        }
+        
+        .navbar li a {
+            text-decoration: none;
+            color: black;
+        }
+        .navbar li a:hover {
+            border-bottom: 2px solid rgb(91, 91, 243);
+            color: rgb(91, 91, 243);
+        }
+
+        .navbar input {
+            border: 2px solid black;
+            float: right;
+            width: 205px;
+            height: 22px;
+            border-radius: 22px;
+        }
+
+        .search {
+            float: right;
+            padding: 18px 58px;
+            width: 188px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Resource</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="https://google.com" target="_blank">Newsletters</a></li>
+                <li><a href="#">Topic</a></li>
+                <div class="search"><input type="text" name="search" id="search" placeholder="Text here..."></div>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

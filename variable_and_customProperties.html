@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable/Coustom properties</title>
+    <style>
+        /* for globle defining the variable we declare the variable inside the :root */
+        :root{
+            --maxhg: 300px;
+            --primary-color: black;
+            --danger-color:  red;
+        }
+
+        .box{
+            /* (--) is use for defining the variable and give any name to the variable(--colr: red;) and in variable we can define different type os properties i.g(color, height, width etc.). But it will be  used only in this scope not the outside of the scope.*/
+            --colr: rgb(249, 216, 222);
+
+            width: 200px;
+            height: var(--maxhg);
+            background-color: var(--colr);
+            border: 2px solid var(--danger-color);
+            margin: 3px 5px;
+            box-shadow: 5px 5px 2px var(--primary-color);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

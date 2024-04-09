@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Position: static(default),Relative, absolute, fixed & sticky</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            display: inline-block;
+            margin: 4px;
+            padding: 4px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .container {
+            background-color: rgb(192, 217, 244);
+            border: 2px solid rgb(8, 8, 8);
+            padding: 4px;
+            height: 1234px;
+        }
+
+        #box2 {
+            /* In this position it move from the actual position with the gap  */
+
+            /* position: relative;
+            top: 23px;
+            left:40px */
+
+
+
+            /* In this position it move from the parent position without a gap  */
+
+            /* position: absolute;
+            top: 33px;
+            left: 40px; */
+
+
+
+            /* In this this position will be fixed and it will not move time of the scrolling the page */
+
+            /* position: fixed;
+            top: 5px; */
+
+
+
+            /* In this the position will be sticky and it will stick the position time of the scrolling the page  */
+
+            position: sticky;
+            top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">box 1</div>
+        <div class="box" id="box2">box 2</div>
+        <div class="box" id="box3">box 3</div>
+        <div class="box" id="box4">box 4</div>
+    </div>
+</body>
+
+</html>

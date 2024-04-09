@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and Text shadow</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card {
+            /* border: 3px solid red; */
+            background-color: rgb(244 216 244);
+            padding: 23px 12px;
+            margin: 23px 12px;
+            /* box-shadow : offset-x offset-y color */
+            /* box-shadow: 9px 6px #bce6f9; */
+
+            /* box-shadow : offset-x offset-y blur-radius color */
+            /* box-shadow: 9px 6px 9px #bce6f9; */
+
+            /* box-shadow : offset-x offset-y blur-radius spread-radius color */
+            /* box-shadow: 9px 6px 9px 1px #bce6f9; */
+
+            /* We can use negative number for box-shadow so the shadow will appear upper side of box */
+            /* box-shadow: -9px -6px  #bce6f9; */
+
+            /* shadow for inner the box we use (box-shadow: inset 4px 2px red;) */
+            /* box-shadow: inset 4px 2px red;  */
+
+            /* We can set multiple effects separated by commas. */
+            box-shadow: 8px 5px 12px green, 10px 10px 16px red;
+        }
+        .card h2{
+            /* Used for giving shadow to the text  */
+            /* text-shadow: 2px 1px red; */
+
+            text-shadow: 4px 5px 2px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>Card1</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error incidunt fuga vitae mollitia et
+                consequuntur autem natus quis alias perferendis soluta, harum culpa doloribus ipsa reiciendis sint vel
+                molestias ipsum modi. Fugiat, tenetur!</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error incidunt fuga vitae mollitia et
+                consequuntur autem natus quis alias perferendis soluta, harum culpa doloribus ipsa reiciendis sint vel
+                molestias ipsum modi. Fugiat, tenetur!</p>
+        </div>
+        <div class="card" id="card3">
+            <h2> Card3</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error incidunt fuga vitae mollitia et
+                consequuntur autem natus quis alias perferendis soluta, harum culpa doloribus ipsa reiciendis sint vel
+                molestias ipsum modi. Fugiat, tenetur!</p>
+        </div>
+    </div>
+</body>
+
+</html>

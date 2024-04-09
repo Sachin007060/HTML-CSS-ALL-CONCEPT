@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Spanning Multiple Rows and Columns</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(5, 2fr);
+            grid-template-rows: repeat(4, 1fr);
+            /* grid-column-gap: 3rem;
+            grid-row-gap: 1rem; */
+            grid-gap: 1rem;
+            border: 2px solid red;
+            padding: 3px;
+        }
+        .item{
+            background-color: rgb(187, 217, 243);
+            padding: 12px;
+            margin: 3px;
+        }
+        .item:first-child{
+            /* grid-column-start: 1;
+            grid-column-end: 3;
+
+            grid-row-start: 1;
+            grid-row-end: 3; */
+
+            /* short-hand for column  */
+            grid-column: 1/ span 3;
+
+            /* Short-hand for row  */
+            grid-row: 1/ span 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item">This is a box1</div>
+        <div class="item">This is a box2</div>
+        <div class="item">This is a box3</div>
+        <div class="item">This is a box4</div>
+        <div class="item">This is a box5</div>
+        <div class="item">This is a box6</div>
+        <div class="item">This is a box7</div>
+        <div class="item">This is a box8</div>
+        <div class="item">This is a box8</div>
+        <div class="item">This is a box8</div>
+        <div class="item">This is a box8</div>
+    </div>
+
+
+</body>
+</html>
